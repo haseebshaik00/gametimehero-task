@@ -1,2 +1,3 @@
 # gametimehero-task
-Game time hero take home task
+
+## Game Time Hero Take Home Task
