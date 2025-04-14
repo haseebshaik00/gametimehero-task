@@ -7,7 +7,12 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+  "build": "tsc",
+  "test": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
