@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RSVP Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: #66d6ad;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      display: flex;
+      gap: 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    input, select {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    #attendeeList {
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    em {
+      color: #9ca3af;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">RSVP Manager</h1>
+
+  <div class="container">
+    <div class="column">
+      <label for="name"><em><b>Name</b></em></label>
+      <input id="name" placeholder="Enter Player Name" />
+
+      <label for="status"><em><b>Select RSVP Status</b></em></label>
+      <select id="status">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+      <button onclick="submitRsvp()">Submit RSVP</button>
+    </div>
+
+    <div class="column">
+      <h2>Confirmed Attendees</h2>
+      <ul id="attendeeList">
+        <em>- No Attendees yet!</em>
+      </ul>
+      <button onclick="fetchAttendees()">Get Attendees!</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

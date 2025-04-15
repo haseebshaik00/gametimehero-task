@@ -4,7 +4,7 @@ import { ConsoleLogger } from './utils/Logger';
 const logger = new ConsoleLogger();
 const service = new RsvpService(logger);
 
-console.log("\nAttendees Response Logs:")
+console.log("Attendees Response Logs:")
 service.addOrUpdate({ id: '1', name: 'Haseeb' }, 'Yes');
 service.addOrUpdate({ id: '2', name: 'Alex' }, 'No');
 service.addOrUpdate({ id: '3', name: 'Hailey' }, 'Maybe');
